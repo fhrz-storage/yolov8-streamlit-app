@@ -2,7 +2,7 @@
 # Adapted to use with Yolov8
 from utils import get_detection_folder, check_folders
 import redirect as rd
-import ultralytics
+from ultralytics import YOLO
 from pathlib import Path
 import streamlit as st
 from PIL import Image
@@ -50,7 +50,7 @@ if __name__ == '__main__':
         print('valid')
         if st.button('Detect'):
             with rd.stderr(format='markdown', to=st.sidebar), st.spinner('Wait for it...'):
-                print(subprocess.run(['yolo', 'task=detect', 'mode=predict', 'model=https://raw.githubusercontent.com/fhrz-storage/fhrz-ta-ppe/main/peripherals/weights/best.pt', 'conf=0.25', 'source={}'.format(source)],capture_output=True, universal_newlines=True).stderr)
+                print(YOLO('https://raw.githubusercontent.com/fhrz-storage/fhrz-ta-ppe/main/peripherals/weights/best.pt'))
 
                     
             if source_index == 0:
