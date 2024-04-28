@@ -6,7 +6,6 @@ from ultralytics import YOLO
 from pathlib import Path
 import streamlit as st
 from PIL import Image
-import subprocess
 import os
 
 # This will check if we have all the folders to save our files for inference
