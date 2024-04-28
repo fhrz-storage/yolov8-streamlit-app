@@ -49,7 +49,7 @@ if __name__ == '__main__':
         print('valid')
         if st.button('Detect'):
             with rd.stderr(format='markdown', to=st.sidebar), st.spinner('Wait for it...'):
-                print(YOLO('https://raw.githubusercontent.com/fhrz-storage/fhrz-ta-ppe/main/peripherals/weights/best.pt'))
+                YOLO('https://raw.githubusercontent.com/fhrz-storage/fhrz-ta-ppe/main/peripherals/weights/best.pt')
 
                     
             if source_index == 0:
