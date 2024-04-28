@@ -2,7 +2,7 @@
 # Adapted to use with Yolov8
 from utils import get_detection_folder, check_folders
 import redirect as rd
-
+from ultralytics import YOLO
 from pathlib import Path
 import streamlit as st
 from PIL import Image
